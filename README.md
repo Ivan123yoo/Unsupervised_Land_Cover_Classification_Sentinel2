@@ -14,7 +14,7 @@ This project is a final assignment for GEOL0069 at University College London, fo
 
 Land cover classification is a vital tool in environmental monitoring, enabling researchers and decision-makers to understand ecosystem changes, manage natural resources, and develop sustainable land management practices. Sentinel-2 satellite imagery offers high-resolution, multi-spectral data, making it ideal for detailed land cover analysis. By combining this data with unsupervised learning techniques, this project demonstrates how to efficiently classify land cover without requiring labeled data.
 
-The significance of this project lies in its scalable approach. Unsupervised learning techniques, such as K-means and DBSCAN, allow for automated land cover classification in diverse regions. This can be applied to various environmental studies, including deforestation monitoring, water body mapping, and agricultural analysis. 
+The significance of this project lies in its scalable approach. Unsupervised learning techniques, such as K-means, allow for automated land cover classification in diverse regions. This can be applied to various environmental studies, including deforestation monitoring, water body mapping, and agricultural analysis. 
 
 The code developed here can be easily adapted to other regions or datasets, making it a versatile tool for environmental researchers and data scientists. It provides a clear, adaptable framework for land cover classification using remote sensing and machine learning, benefiting both academic research and practical environmental management.
 
@@ -26,3 +26,27 @@ In this project, specific bands are used for targeted land cover analysis. NDVI 
 
 The use of Sentinel-2 imagery allows for consistent and accurate land cover detection across both regions. Its high-resolution, multi-spectral capabilities ensure that vegetation, water bodies, and other features are accurately identified, making it the foundation of this project’s classification process.
 
+** NDWI analysis**
+<img width="1046" alt="Screenshot 2025-05-17 at 12 50 08" src="https://github.com/user-attachments/assets/c88187b0-12b7-483d-9e11-947798afdb78" />
+
+## NDWI Calculation Using Sentinel-2 MSI Imagery
+
+The **Normalized Difference Water Index (NDWI)** is a remote sensing technique used to detect water bodies in satellite imagery. It is calculated using the Green (B3) and Near-Infrared (NIR) (B8) bands from Sentinel-2 MSI imagery. 
+
+### NDWI Formula:
+$$
+\text{NDWI} = \frac{\text{Green - NIR}}{\text{Green + NIR}}
+$$
+
+### Why These Bands?
+The Green Band (B3) is highly reflective for water bodies, making it useful for distinguishing water from vegetation. The Near-Infrared (NIR) Band (B8) is absorbed by water but strongly reflected by vegetation, creating a strong contrast.
+
+### What the Figure Shows:
+The MSI (MultiSpectral Instrument) on the Sentinel-2 satellite captures reflected light across multiple bands, including Green (B3) and NIR (B8). These bands are used to calculate NDWI, with high values indicating water (green in the images) and low values indicating land (red in the images). 
+
+The figure highlights the NDWI results for two regions: 
+Mississippi, where green areas represent water bodies, while red areas show land. 
+Patagonia, where high NDWI values show the water bodies, while land appears red.
+
+### Applications:
+NDWI is widely used in environmental monitoring, water resource management, and flood mapping.
