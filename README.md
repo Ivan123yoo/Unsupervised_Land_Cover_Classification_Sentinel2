@@ -50,3 +50,8 @@ Patagonia, where high NDWI values show the water bodies, while land appears red.
 
 ### Applications:
 NDWI is widely used in environmental monitoring, water resource management, and flood mapping.
+
+### K-Means Clustering on Mississippi Region
+
+This figure demonstrates the application of K-means clustering on a Sentinel-2 satellite image of the Mississippi region. The top section illustrates the concept of K-means clustering, where data points are categorized into distinct clusters. The lower section showcases the practical implementation: the original true color image of Mississippi is processed using K-means clustering, resulting in a classified image with four distinct clusters (k=4). This approach effectively segments the region into areas of similar characteristics, providing a clear visualization of different land cover types.
+
