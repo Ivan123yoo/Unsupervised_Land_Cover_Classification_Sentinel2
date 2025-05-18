@@ -2,11 +2,11 @@
 
 ## About This Project
 
-This project is a final assignment for GEOL0069 at University College London, focusing on the application of unsupervised learning techniques to classify land cover types in two contrasting regions: Mississippi and Patagonia. Using Sentinel-2 satellite imagery, the project explores the use of spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means and DBSCAN) to identify and analyze various land cover categories, including vegetation, water bodies, and other natural features.
+This project is a final assignment for GEOL0069 at University College London, focusing on the application of unsupervised learning techniques to classify land cover types in two contrasting regions: Mississippi and Patagonia. Using Sentinel-2 satellite imagery, the project explores the use of spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means) to identify and analyze various land cover categories, including vegetation, water bodies, and other natural features.
 
 ### Project Objectives
 - Utilize NDVI, NDWI, and SWI for initial land cover characterization.
-- Apply unsupervised clustering (K-means and DBSCAN) to classify land cover types.
+- Apply unsupervised clustering (K-means) to classify land cover types.
 - Compare the land cover characteristics between two diverse regions: Mississippi and Patagonia.
 - Provide a clear and well-documented workflow for unsupervised land cover classification using Python.
 
