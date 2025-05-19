@@ -57,18 +57,39 @@ This figure demonstrates the application of K-means clustering on a Sentinel-2 s
 
 <img width="1021" alt="Screenshot 2025-05-18 at 16 05 54" src="https://github.com/user-attachments/assets/22b0f929-a195-4209-81c6-404db21e9ee7" />
 
-## Step-by-Step Guide for the Code
+## Step-by-step guide
 
-- Imported essential libraries (numpy, matplotlib, rasterio, sklearn).  
-- Loaded Sentinel-2 images (Mississippi and Patagonia) using rasterio.  
-- Calculated NDVI using Red and Near-Infrared bands.  
-- Calculated NDWI using Green and Near-Infrared bands.  
-- Calculated SWI using Red Edge and Short-Wave Infrared bands.  
-- Generated water masks using binary thresholds on SWI.  
-- Normalized pixel values for consistent clustering.  
-- Applied K-means clustering to classify land cover types.  
-- Visualized NDVI, NDWI, SWI, and clustered images.  
-- Saved final processed images for analysis.  
+This project was created using Google Colab for unsupervised land cover classification. Follow these steps to set it up:
+
+1. **Download the Notebook:**  
+   - Download `Unsupervised_Land_Cover_Classification.ipynb` from this repository.
+
+2. **Get Sentinel-2 Images:**  
+   - Ensure you have Sentinel-2 images for Mississippi and Patagonia, including the necessary bands (Red, NIR, Green, Red Edge, SWIR).
+
+3. **Set File Paths:**  
+   - Modify file paths in the Colab notebook to match your image locations.
+
+4. **Install Required Libraries:**  
+   - Run the cell to install `rasterio`. Other libraries are pre-installed in Colab.
+
+5. **Run the Code:**  
+   - Execute the NDVI section for vegetation mapping.  
+   - Execute NDWI and SWI sections for water detection.  
+   - Run the K-means clustering section to classify land cover.
+
+6. **Adjust K-means Clustering (Optional):**  
+   - Change the value of `k` to test different cluster numbers (3, 4, 5, or 6).
+
+7. **Save Processed Images:**  
+   - Save the final NDVI, NDWI, SWI, and clustered images.
+
+8. **Analyze Results:**  
+   - Compare NDVI, NDWI, and SWI maps for both regions.  
+   - Evaluate the impact of different k-values.
+
+9. **Customize Further:**  
+   - Modify clustering, add new spectral indices, or test other regions.
 
 
 
