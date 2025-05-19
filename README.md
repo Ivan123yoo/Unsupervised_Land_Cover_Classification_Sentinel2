@@ -1,22 +1,32 @@
 # Land Cover Classification Using Unsupervised Learning
 
-## About This Project
+## About This Project  
+This project is a final assignment for GEOL0069 at University College London, exploring the use of remote sensing and unsupervised learning techniques for land cover classification. Using Sentinel-2 satellite imagery, it applies spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means) to analyze and distinguish various land cover types, including vegetation, water bodies, and natural features. The focus is on two contrasting regions — the Mississippi Delta and Patagonia — each presenting unique environmental characteristics and classification challenges.
 
-This project is a final assignment for GEOL0069 at University College London, focusing on the application of unsupervised learning techniques to classify land cover types in two contrasting regions: Mississippi Patagonia. Using Sentinel-2 satellite imagery, the project explores the use of spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means) to identify and analyze various land cover categories, including vegetation, water bodies, and other natural features.
+## Project Objectives  
+- Utilize NDVI, NDWI, and SWI for initial land cover characterization, capturing vegetation health, water presence, and enhanced water detection.  
+- Apply K-means clustering (an unsupervised method) to categorize land cover types without requiring labeled data.  
+- Explore how spectral characteristics vary across two diverse regions — Mississippi, with its river networks and coastal zones, and Patagonia, with its mountainous terrain and complex water systems.  
+- Provide a clear and well-documented workflow for land cover classification using Python.  
 
-### Project Objectives
-- Utilize NDVI, NDWI, and SWI for initial land cover characterization.
-- Apply unsupervised clustering (K-means) to classify land cover types.
-- Compare the land cover characteristics between two diverse regions: Mississippi and Patagonia.
-- Provide a clear and well-documented workflow for unsupervised land cover classification using Python.
+## Background and Context  
+Land cover classification is essential for environmental monitoring, enabling better understanding of ecosystem dynamics, resource management, and sustainable land use. However, accurately distinguishing land cover types can be challenging due to mixed pixels, complex landscapes, and variable environmental conditions. Traditional supervised methods require labeled data, which is often unavailable, especially for remote regions. 
 
-## Background and Context
+This project addresses these challenges using Sentinel-2 imagery, which provides high-resolution, multi-spectral data suitable for detailed land cover analysis. By combining NDVI, NDWI, and SWI — each tailored to detect specific land features — with unsupervised K-means clustering, this project demonstrates a scalable approach to efficiently classify diverse landscapes without the need for labeled training data. 
 
-Land cover classification is a vital tool in environmental monitoring, enabling researchers and decision-makers to understand ecosystem changes, manage natural resources, and develop sustainable land management practices. Sentinel-2 satellite imagery offers high-resolution, multi-spectral data, making it ideal for detailed land cover analysis. By combining this data with unsupervised learning techniques, this project demonstrates how to efficiently classify land cover without requiring labeled data.
+### Study Regions
+This methodology is tested on two regions that represent different classification challenges:  
+- **Mississippi Delta:**  
+  - Characterized by a complex river network, water channels, and coastal zones.  
+  - Challenges include distinguishing water from land due to sediment and shallow waters.  
 
-The significance of this project lies in its scalable approach. Unsupervised learning techniques, such as K-means, allow for automated land cover classification in diverse regions. This can be applied to various environmental studies, including deforestation monitoring, water body mapping, and agricultural analysis. 
+- **Patagonia:**  
+  - A region of mountainous terrain, lakes, and dense vegetation.  
+  - Challenges arise from the mix of snow, water, and forested areas, complicating classification.  
 
-The code developed here can be easily adapted to other regions or datasets, making it a versatile tool for environmental researchers and data scientists. It provides a clear, adaptable framework for land cover classification using remote sensing and machine learning, benefiting both academic research and practical environmental management.
+## Why This Approach Matters  
+By integrating multiple spectral indices with unsupervised clustering, this project provides a scalable, adaptable solution for land cover classification in diverse regions. The workflow can be applied to other geographic areas, making it a versatile tool for environmental research and data science.  
+
 
 ## Sentinel-2 Satellite Imagery
 
