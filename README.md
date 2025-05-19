@@ -2,7 +2,7 @@
 
 ## About This Project
 
-This project is a final assignment for GEOL0069 at University College London, focusing on the application of unsupervised learning techniques to classify land cover types in two contrasting regions: Mississippi and Patagonia. Using Sentinel-2 satellite imagery, the project explores the use of spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means) to identify and analyze various land cover categories, including vegetation, water bodies, and other natural features.
+This project is a final assignment for GEOL0069 at University College London, focusing on the application of unsupervised learning techniques to classify land cover types in two contrasting regions: Mississippi Patagonia. Using Sentinel-2 satellite imagery, the project explores the use of spectral indices (NDVI, NDWI, and SWI) and clustering algorithms (K-means) to identify and analyze various land cover categories, including vegetation, water bodies, and other natural features.
 
 ### Project Objectives
 - Utilize NDVI, NDWI, and SWI for initial land cover characterization.
@@ -57,17 +57,20 @@ This figure demonstrates the application of K-means clustering on a Sentinel-2 s
 
 <img width="1021" alt="Screenshot 2025-05-18 at 16 05 54" src="https://github.com/user-attachments/assets/22b0f929-a195-4209-81c6-404db21e9ee7" />
 
-## Step-by-Step Guide for the code
+## Step-by-Step Guide for the Code
 
-1. Imported essential libraries (`numpy`, `matplotlib`, `rasterio`, `sklearn`, `cv2` for image processing).
-2. Loaded Sentinel-2 images (Mississippi and Patagonia) using `rasterio`.
-3. Calculated NDWI (Normalized Difference Water Index) to detect water bodies.
-4. Calculated NDVI (Normalized Difference Vegetation Index) for vegetation mapping.
-5. Preprocessed images by normalizing pixel values.
-6. Applied K-means clustering to classify land cover types.
-7. Visualized the original, NDWI, NDVI, and clustered images.
-8. Compared clustering results for both regions.
-9. Saved final processed images for analysis.
+- Imported essential libraries (numpy, matplotlib, rasterio, sklearn).  
+- Loaded Sentinel-2 images (Mississippi and Patagonia) using rasterio.  
+- Calculated NDVI using Red and Near-Infrared bands.  
+- Calculated NDWI using Green and Near-Infrared bands.  
+- Calculated SWI using Red Edge and Short-Wave Infrared bands.  
+- Generated water masks using binary thresholds on SWI.  
+- Normalized pixel values for consistent clustering.  
+- Applied K-means clustering to classify land cover types.  
+- Visualized NDVI, NDWI, SWI, and clustered images.  
+- Saved final processed images for analysis.  
+
+
 
 ### Environmental Cost Assessment
 
