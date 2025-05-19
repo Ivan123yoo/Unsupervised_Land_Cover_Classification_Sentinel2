@@ -122,9 +122,9 @@ This project’s environmental impact was calculated by assessing the energy con
 
 This result indicates a moderate environmental impact for the project. Although the total carbon emissions of 1.66 kg CO₂ are not excessively high, they highlight the importance of optimizing computational processes to minimize energy consumption.
 
-## Acknowledgments
+## Project Demonstration Video
 
-I would like to express my sincere gratitude to Dr. Michel Tsamados and Weibin Chen for their guidance and support throughout this project.
+[!(https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
 
 ## Data Source
 
@@ -135,6 +135,9 @@ A free account is required for these images to be downloaded.
 
 This project was developed using Google Colab Pro, which provided additional RAM and computational resources necessary for processing high-resolution Sentinel-2 imagery and performing clustering analysis efficiently.
 
+## Acknowledgments
+
+I would like to express my sincere gratitude to Dr. Michel Tsamados and Weibin Chen for their guidance and support throughout this project.
 
 ## References
 
