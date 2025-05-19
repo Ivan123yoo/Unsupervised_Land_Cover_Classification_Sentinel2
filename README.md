@@ -124,7 +124,7 @@ This result indicates a moderate environmental impact for the project. Although 
 
 ## Project Demonstration Video
 
-[!(https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
+https://youtu.be/hFFw8sM8QG8
 
 ## Data Source
 
