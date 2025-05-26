@@ -14,18 +14,27 @@ Land cover classification is essential for environmental monitoring, enabling be
 
 This project addresses these challenges using Sentinel-2 imagery, which provides high-resolution, multi-spectral data suitable for detailed land cover analysis. By combining NDVI, NDWI, and SWI — each tailored to detect specific land features — with unsupervised K-means clustering, this project demonstrates a scalable approach to efficiently classify diverse landscapes without the need for labeled training data. 
 
-### Study Regions
-This methodology is tested on two regions that represent different classification challenges:  
-- **Mississippi Delta:**  
-  - Characterized by a complex river network, water channels, and coastal zones.  
-  - Challenges include distinguishing water from land due to sediment and shallow waters.  
+## Study Regions
 
-- **Patagonia:**  
-  - A region of mountainous terrain, lakes, and dense vegetation.  
-  - Challenges arise from the mix of snow, water, and forested areas, complicating classification.  
+This project focuses on two geographically and environmentally contrasting regions: the Mississippi Delta and Patagonia. These areas were selected to evaluate how well unsupervised classification methods perform across different landscapes with varying complexity.
 
-## Why This Approach Matters  
-By integrating multiple spectral indices with unsupervised clustering, this project provides a scalable, adaptable solution for land cover classification in diverse regions. The workflow can be applied to other geographic areas, making it a versatile tool for environmental research and data science.  
+The Mississippi Delta is a low-lying coastal region defined by extensive river networks, wetlands, and sediment-rich waters. Its dynamic landscape includes a mix of open water, vegetated floodplains, and marshes, making it ideal for assessing how spectral indices like NDVI, NDWI, and SWI can distinguish between water and vegetation in a flat, aquatic-dominated environment.
+
+In contrast, Patagonia encompasses mountainous terrain in southern Chile and Argentina, with glacial lakes, forested valleys, and high-altitude snow-covered peaks. The diverse land cover and topography present a very different challenge, offering the opportunity to test whether the same classification approach can be effectively applied in rugged, heterogeneous conditions.
+
+By applying the same remote sensing and clustering techniques to both regions, this study demonstrates how a scalable, unsupervised workflow can adapt to varying environmental contexts without the need for training labels or region-specific tuning.
+
+
+## Why This Approach Matters
+
+This project demonstrates how combining spectral indices with unsupervised clustering can produce a powerful, flexible framework for land cover classification. By using NDVI, NDWI, and SWI, the method captures key surface features such as vegetation density and water distribution without requiring labeled data. This makes the approach especially valuable in remote or under-studied regions where labeled training datasets are unavailable or expensive to produce.
+
+Unsupervised clustering, particularly K-means, offers a computationally efficient way to segment satellite imagery into meaningful land cover categories. When paired with the right spectral inputs, it allows for region-specific analysis while maintaining general applicability.
+
+The workflow is fully adaptable, allowing users to process data from any location as long as relevant Sentinel-2 bands are available. It also runs on accessible cloud platforms like Google Colab, removing the need for high-end local hardware and enabling broader participation in environmental monitoring and geospatial analysis.
+
+By prioritizing automation and accessibility, this approach offers a practical solution for researchers and data scientists seeking to classify land cover in diverse environments with minimal resources.
+ 
 
 
 ## Sentinel-2 Satellite Imagery
@@ -36,8 +45,6 @@ In this project, specific bands are used for targeted land cover analysis. NDVI 
 
 The use of Sentinel-2 imagery allows for consistent and accurate land cover detection across both regions. Its high-resolution, multi-spectral capabilities ensure that vegetation, water bodies, and other features are accurately identified, making it the foundation of this project’s classification process.
 
-** NDWI analysis**
-<img width="1046" alt="Screenshot 2025-05-17 at 12 50 08" src="https://github.com/user-attachments/assets/c88187b0-12b7-483d-9e11-947798afdb78" />
 
 ## NDWI Calculation Using Sentinel-2 MSI Imagery
 
@@ -51,8 +58,13 @@ $$
 ### Why These Bands?
 The Green Band (B3) is highly reflective for water bodies, making it useful for distinguishing water from vegetation. The Near-Infrared (NIR) Band (B8) is absorbed by water but strongly reflected by vegetation, creating a strong contrast.
 
-### What the Figure Shows:
-The MSI (MultiSpectral Instrument) on the Sentinel-2 satellite captures reflected light across multiple bands, including Green (B3) and NIR (B8). These bands are used to calculate NDWI, with high values indicating water (green in the images) and low values indicating land (red in the images). 
+
+<img width="1046" alt="Screenshot 2025-05-17 at 12 50 08" src="https://github.com/user-attachments/assets/c88187b0-12b7-483d-9e11-947798afdb78" />
+
+### What the Figure Illustrates
+
+This figure demonstrates how the Sentinel-2 MultiSpectral Instrument (MSI) uses the Green (Band 3) and Near-Infrared (Band 8) bands to calculate the Normalized Difference Water Index (NDWI), a widely used metric for detecting water bodies. NDWI values are derived from the reflectance differences between these bands, with higher values indicating the presence of water and lower values representing land, vegetation, or bare soil. In the images shown, green areas correspond to high NDWI values and highlight water features, while red areas indicate non-water surfaces. The Mississippi image clearly outlines river networks and delta channels, while the Patagonia image emphasizes glacial lakes within mountainous terrain. This visual comparison underscores how NDWI adapts to different environmental settings and effectively distinguishes water from surrounding land.
+ 
 
 The figure highlights the NDWI results for two regions: 
 Mississippi, where green areas represent water bodies, while red areas show land. 
@@ -102,25 +114,20 @@ This project was created using Google Colab for unsupervised land cover classifi
    - Modify clustering, add new spectral indices, or test other regions.
 
 
+## Environmental Impact and Energy Assessment
 
-### Environmental Cost Assessment
+This project involved processing Sentinel-2 satellite imagery using Google Colab Pro, which offers cloud-based access to high-RAM environments and GPU acceleration. The total data processed was approximately 35.95 MB, including imagery for both the Mississippi Delta and Patagonia. Over the course of the project, roughly 50 hours of GPU-based computation were used for NDVI, NDWI, SWI generation, and unsupervised clustering with K-means.
 
-This project’s environmental impact was calculated by assessing the energy consumption and carbon emissions associated with processing Sentinel-2 satellite data on Google Colab. The analysis accounted for data size, computational resources, and carbon emissions:
+Based on the T4 GPU’s average power consumption of 70 watts, total energy use was estimated at 3.5 kWh. Using a carbon intensity factor of 0.475 kg CO₂ per kWh (global average), the project generated an estimated 1.66 kg of carbon emissions. This is considered moderate for a short-term, cloud-based remote sensing analysis.
 
-**Data Size:**  
-- Total data processed: **35.95 MB**, including Sentinel-2 bands for Mississippi and Patagonia.
+While the energy use is not excessive, there are areas where improvements could be made. Some operations—particularly repeated clustering runs and figure generation—could have been optimized to reduce total runtime. Google Colab was chosen for its accessibility, but running the analysis locally on efficient hardware, or using preprocessed band combinations where possible, could have reduced compute needs. Saving and reusing intermediate arrays rather than recalculating them also presents an opportunity for energy savings.
 
-**Computational Resources:**  
-- Platform: Google Colab Pro with T4 GPU (High RAM).  
-- Total processing time: 50 hours.  
-- Average power consumption of T4 GPU: 70 watts (W).  
+On the positive side, the project intentionally avoided training complex machine learning models, which often require longer runtimes and more data. By using unsupervised methods, it reduced the indirect environmental cost of acquiring and labeling large training datasets. Additionally, image resolution was kept moderate to balance clarity and performance.
 
-**Energy Consumption and Carbon Emissions:**  
-- Total energy consumption: 3.5 kWh (50 hours × 70 W).  
-- Carbon intensity: 0.475 kg CO₂/kWh (average value).  
-- Total carbon emissions: 1.66 kg CO₂.  
+In future iterations, more efficient code structuring, clearer memory handling, and batch-based processing strategies could further minimize environmental load. Incorporating cloud efficiency metrics or selecting lower-carbon compute platforms could also enhance sustainability. 
 
-This result indicates a moderate environmental impact for the project. Although the total carbon emissions of 1.66 kg CO₂ are not excessively high, they highlight the importance of optimizing computational processes to minimize energy consumption.
+This reflection highlights that even relatively small-scale academic projects have measurable environmental footprints. It reinforces the importance of writing efficient, scalable code and making mindful platform choices when conducting geospatial analysis.
+
 
 ## Project Demonstration Video
 
