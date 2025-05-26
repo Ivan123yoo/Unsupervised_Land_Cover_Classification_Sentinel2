@@ -146,16 +146,16 @@ This project was developed using Google Colab Pro, which provided additional RAM
 
 I would like to express my sincere gratitude to Dr. Michel Tsamados and Weibin Chen for their guidance and support throughout this project.
 
-## References
+### References
 
-Du, Y., Ling, F., Zhou, J., Wang, Q., Wen, D. and Guo, Y. (2016). 'Normalized Difference Vegetation Index (NDVI) based on Landsat 8 OLI imagery accurately monitors vegetation dynamics in a subtropical region', *Remote Sensing*, 8(3), pp. 1–14.
+- Du, Y., Ling, F., Zhou, J., Wang, Q., Wen, D. and Guo, Y. (2016). 'Normalized Difference Vegetation Index (NDVI) based on Landsat 8 OLI imagery accurately monitors vegetation dynamics in a subtropical region', *Remote Sensing*, 8(3), pp. 1–14. [https://doi.org/10.3390/rs8030259](https://doi.org/10.3390/rs8030259)
 
-Gao, B. C. (1996). 'NDWI – A Normalized Difference Water Index for Remote Sensing of Vegetation Liquid Water from Space', *Remote Sensing of Environment*, 58(3), pp. 257–266.
+- Ester, M., Kriegel, H.P., Sander, J. and Xu, X. (1996). 'A density-based algorithm for discovering clusters in large spatial databases with noise', *Proceedings of the Second International Conference on Knowledge Discovery and Data Mining*, pp. 226–231. [https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf](https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf)
 
-Jiang, Z., Huete, A. R., Chen, Y., Chen, J. and Li, J. (2006). 'Analysis of NDVI and scaled difference vegetation index retrievals of vegetation fraction', *Remote Sensing of Environment*, 101(3), pp. 366–378.
+- Gao, B. C. (1996). 'NDWI – A Normalized Difference Water Index for Remote Sensing of Vegetation Liquid Water from Space', *Remote Sensing of Environment*, 58(3), pp. 257–266. [https://doi.org/10.1016/S0034-4257(96)00067-3](https://doi.org/10.1016/S0034-4257(96)00067-3)
 
-MacQueen, J. (1967). 'Some Methods for Classification and Analysis of Multivariate Observations', *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability*, 1, pp. 281–297.
+- Jiang, Z., Huete, A. R., Chen, Y., Chen, J. and Li, J. (2006). 'Analysis of NDVI and scaled difference vegetation index retrievals of vegetation fraction', *Remote Sensing of Environment*, 101(3), pp. 366–378. [https://doi.org/10.1016/j.rse.2006.01.003](https://doi.org/10.1016/j.rse.2006.01.003)
 
-Ester, M., Kriegel, H.P., Sander, J. and Xu, X. (1996). 'A density-based algorithm for discovering clusters in large spatial databases with noise', *Proceedings of the Second International Conference on Knowledge Discovery and Data Mining*, pp. 226–231.
+- MacQueen, J. (1967). 'Some Methods for Classification and Analysis of Multivariate Observations', *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability*, 1, pp. 281–297. [https://projecteuclid.org/euclid.bsmsp/1200512992](https://projecteuclid.org/euclid.bsmsp/1200512992)
 
-Richards, J. A. (2013). 'Remote Sensing Digital Image Analysis: An Introduction', *Springer Science & Business Media*.
+- Richards, J. A. (2013). *Remote Sensing Digital Image Analysis: An Introduction*, Springer Science & Business Media. [https://doi.org/10.1007/978-3-642-30062-2](https://doi.org/10.1007/978-3-642-30062-2)
