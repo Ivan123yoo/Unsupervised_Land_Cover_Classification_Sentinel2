@@ -138,6 +138,8 @@ https://youtu.be/hFFw8sM8QG8
 The Sentinel-2 satellite images used in this project were obtained from the Copernicus Open Access Hub, a part of the European Space Agency's (ESA) Copernicus Programme. These images provide high-resolution multispectral data, making them ideal for NDWI, NDVI, and clustering analyses.
 A free account is required for these images to be downloaded.
 
+## All raw and processed image files are stored in this repository and used in the notebook. If re-running the notebook locally, please adjust the file paths accordingly to match your local directory structure. ##
+
 ## Additional Information
 
 This project was developed using Google Colab Pro, which provided additional RAM and computational resources necessary for processing high-resolution Sentinel-2 imagery and performing clustering analysis efficiently.
